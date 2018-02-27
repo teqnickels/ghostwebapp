@@ -1,0 +1,35 @@
+{
+  "name": "ghost_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon index.js",
+    "client": "nodemon start-client.js",
+    "db:reset": " npm run db:drop; npm run db:create; npm run db:schema; npm run db:seed",
+    "db:drop": "dropdb ghosts",
+    "db:create": "createdb ghosts",
+    "db:schema": "psql -d ghosts < ghost_server/db/schema.sql",
+    "db:seed": "psql -d ghosts < ghost_server/db/seed.sql",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.0",
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.0",
+    "express-session": "^1.15.6",
+    "passport": "^0.4.0",
+    "passport-oauth2": "^1.4.0",
+    "node-fetch": "^2.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
