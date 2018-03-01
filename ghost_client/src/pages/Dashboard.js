@@ -1,11 +1,11 @@
 import React, { Component } from 'react'; 
-import Map from '../components/Map';
+import MapContainer from '../components/MapContainer';
 
 export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Map/>
+        <MapContainer/>
       </div>
     );
   };

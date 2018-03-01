@@ -1,0 +1,36 @@
+[
+  {
+    "title": "marker one", 
+    "name": "name one", 
+    "lat": 37.778519,
+    "lng": -122.405640
+  }, 
+  {
+    "title": "marker two",
+    "name": "name two",
+    "lat": 37.778519,
+    "lng": -122.405740
+  },
+  {
+    "title": "marker three", 
+    "name": "name three", 
+    "lat": 37.778519,
+    "lng": -122.405840
+  }, 
+  {
+    "title": "marker four",
+    "name": "name four",
+    "lat": 37.778519,
+    "lng": -122.405940
+  }, {
+    "title": "marker five",
+    "name": "name five",
+    "lat": 37.778519,
+    "lng": -122.405540
+  }, {
+    "title": "marker six",
+    "name": "name six",
+    "lat": 37.778519,
+    "lng": -122.405440
+  }
+]
