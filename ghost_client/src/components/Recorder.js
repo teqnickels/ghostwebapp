@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
+// import { render } from 'react-dom';
 import {FloatingActionButton, MuiThemeProvider} from 'material-ui';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MicrophoneOn from 'material-ui/svg-icons/av/mic';

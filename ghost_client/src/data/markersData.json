@@ -3,34 +3,40 @@
     "title": "marker one", 
     "name": "name one", 
     "lat": 37.778519,
-    "lng": -122.405640
+    "lng": -122.405640,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   }, 
   {
     "title": "marker two",
     "name": "name two",
     "lat": 37.778519,
-    "lng": -122.405740
+    "lng": -122.405740,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   },
   {
     "title": "marker three", 
     "name": "name three", 
     "lat": 37.778519,
-    "lng": -122.405840
+    "lng": -122.405840,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   }, 
   {
     "title": "marker four",
     "name": "name four",
     "lat": 37.778519,
-    "lng": -122.405940
+    "lng": -122.405940,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   }, {
     "title": "marker five",
     "name": "name five",
     "lat": 37.778519,
-    "lng": -122.405540
+    "lng": -122.405540,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   }, {
     "title": "marker six",
     "name": "name six",
     "lat": 37.778519,
-    "lng": -122.405440
+    "lng": -122.405440,
+    "audioFile": "file:///Users/debrenamcewen/Downloads/66a39ddf-9ba8-43be-92d9-2e0930adafae.webm"
   }
 ]
