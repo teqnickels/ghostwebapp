@@ -32,25 +32,6 @@ export class MapContainer extends Component {
       
   }
 
-  // renderMarkers = () => {
-  //   return markers.map((marker, index) => {
-  //     return (
-  //       <div key={index}>
-  //         <Marker 
-  //           key={marker.title}
-  //           title={marker.title} 
-  //           position={{lat: marker.lat, lng: marker.lng}} 
-  //           name={marker.name}
-  //           audio={marker.audioFile} 
-  //           onClick={this.toggleInfoWindow.bind(this)}
-  //         />
-  //         {this.renderInfoWindow(this.state.showInfoWindow, index)}
-  //       </div>
-  //     )
-  //   }
-  //   );
-  // };
-
   renderMarkers = () => {
   return markers.map((marker, index) => {
     return (
