@@ -1,0 +1,14 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.formComponent {
+  position: absolute;
+  margin-top:  30%; 
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+

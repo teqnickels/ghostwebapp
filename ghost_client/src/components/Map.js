@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import { geoLocate } from '../util/geoLocate';
 
 export default class Map extends Component {
 
@@ -23,8 +22,6 @@ export default class Map extends Component {
       const mapRef = this.refs.map;
       const node = ReactDOM.findDOMNode(mapRef);
       
-      console.log('NODE', node)
-
       let zoom = 14;
       let lat = 37.774929;
       let lng = -122.419416;
