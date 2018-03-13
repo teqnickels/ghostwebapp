@@ -12,11 +12,12 @@ export class MapContainer extends Component {
     this.state = { 
       showInfoWindow: false,
       activeMarker: {},
-      userLat:0, 
+      userLat: 0, 
       userLng: 0, 
       markers: []
     }
   }
+
 
   componentDidMount() {
     this.getSurroundingMarkers()
@@ -36,7 +37,7 @@ export class MapContainer extends Component {
       navigator
         .geolocation
         .getCurrentPosition((position) => {
-          console.log("position:", position)
+          console.log('position::', position)
           this.setState({
             userLat: position.coords.latitude,
             userLng: position.coords.longitude
@@ -45,13 +46,11 @@ export class MapContainer extends Component {
     } else {
       console.log("browser doesn't support geolocation, hard set lat and lng")
       //browser doesn't support geolocation, hard set lat and lng
-      this.setState({lat: 37.774929, lng: -122.419416});
+      // this.setState({ userLat: 37.774929, userLng: -122.419416 });
     }
   }
 
-  onMarkerClick = (props, marker, e) => {
-    console.log('clicked marker', props, marker);
-    
+  onMarkerClick = (props, marker, e) => {    
     this.setState({
       showInfoWindow: !this.state.showInfoWindow,
       activeMarker: marker
@@ -88,8 +87,8 @@ export class MapContainer extends Component {
   });
 };
 
-
   render() {
+    const { showInfoWindow, activeMarker, userLat, userLng, markers } = this.state
     if (!this.props.loaded) {
       return <div>Loading...</div>
     }
@@ -99,8 +98,9 @@ export class MapContainer extends Component {
         <Map google={this.props.google}
             style={{width: '100%', height: '100%'}}
             className={'map'}
-            zoom={14}>
-
+            zoom={14}
+            center={{ lat: userLat, lng: userLng}}
+            >
           {this.renderMarkers()}
           {this.renderInfoWindow()}
         </Map>
