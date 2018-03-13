@@ -3,12 +3,49 @@ import { GoogleApiWrapper, Map, Marker, InfoWindow } from 'google-maps-react';
 import markers from '../data/markersData';
 import { GOOGLE_MAPS_API_KEY } from '../config';
 
+
+//export 'default' when exporting the whole file! 
+
 export class MapContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { 
       showInfoWindow: false,
-      activeMarker: {}
+      activeMarker: {},
+      userLat:0, 
+      userLng: 0, 
+      markers: []
+    }
+  }
+
+  componentDidMount() {
+    this.getSurroundingMarkers()
+    this.getLocation()
+  }
+
+  getSurroundingMarkers() {
+    //FOR NOW, THIS IS USING MOCK DATA TO MIMIC DB CALL
+    //IN THE FUTURE, REPLACE MARKERS WITH THE RESULT OF THE DB CALL
+    this.setState({
+      markers: markers
+    })
+  }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator
+        .geolocation
+        .getCurrentPosition((position) => {
+          console.log("position:", position)
+          this.setState({
+            userLat: position.coords.latitude,
+            userLng: position.coords.longitude
+          });
+        })
+    } else {
+      console.log("browser doesn't support geolocation, hard set lat and lng")
+      //browser doesn't support geolocation, hard set lat and lng
+      this.setState({lat: 37.774929, lng: -122.419416});
     }
   }
 
@@ -33,14 +70,14 @@ export class MapContainer extends Component {
   }
 
   renderMarkers = () => {
-  return markers.map((marker, index) => {
+  return this.state.markers.map((marker, index) => {
     return (
         <Marker
           key={marker.title}
           title={marker.title}
           position={{
-          lat: marker.lat,
-          lng: marker.lng
+          lat: this.state.userLat,
+          lng: this.state.userLng
         }}
           name={marker.name}
           audio={marker.audioFile}
