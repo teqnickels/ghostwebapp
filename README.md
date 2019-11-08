@@ -1,6 +1,6 @@
 # ghostwebapp
 # Ghosts
-A mobile application that uses google maps to geolocated audio-clips which are only accessible by proximity to the original recording location.
+A mobile application that uses google maps to geolocate audio-clips which are only accessible by proximity to the original recording location.
 
 ### MVP Features:
 - [ ]  Users can log in via Google OAuth
